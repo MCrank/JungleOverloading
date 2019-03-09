@@ -40,7 +40,14 @@ namespace JungleOverloading.Employees
             Eat();
             foreach (var employee in companions)
             {
-                Console.WriteLine($"{employee.FirstName} is with me.");
+                if (employee.FirstName.ToLower().Contains("marco") && employee.LastName.ToLower().Contains("crank"))
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine($"{employee.FirstName} is with me.");
+                }
             }
         }
 
